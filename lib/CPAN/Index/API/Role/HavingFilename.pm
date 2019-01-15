@@ -1,6 +1,6 @@
 package CPAN::Index::API::Role::HavingFilename;
 
-# ABSTRACT: Provides 'filename' attribute
+our $VERSION = '0.008';
 
 use strict;
 use warnings;
@@ -25,6 +25,12 @@ sub _build_filename {
 1;
 
 =pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+CPAN::Index::Role::HavingFilename - Provides 'filename' attribute
 
 =head1 REQUIRES
 

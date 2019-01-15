@@ -1,6 +1,6 @@
 package CPAN::Index::API::File::ModList;
 
-# ABSTRACT: Interface to 03modlist.data
+our $VERSION = '0.008';
 
 use strict;
 use warnings;
@@ -122,6 +122,12 @@ __PACKAGE__->meta->make_immutable;
 
 =pod
 
+=encoding UTF-8
+
+=head1 NAME
+
+CPAN::Index::File::ModList - Interface to C<03modlist.data>.
+
 =head1 SYNOPSIS
 
   my $modlist = CPAN::Index::File::ModList->parse_from_repo_uri(
@@ -134,7 +140,7 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 DESCRIPTION
 
-This is a class to read and write 03modlist.data
+This is a class to read and write C<03modlist.data>.
 
 =head1 METHODS
 
@@ -215,7 +221,7 @@ Number of the chapter under which the module is classified. Valid options are:
 
 =item 28 - Perl6
 
-=item 99 - Not In Modulelist
+=item 99 - Not In Module list
 
 =back
 
@@ -300,7 +306,7 @@ Single character indicating the interface of the module. Valid options are:
 
 =item public_license
 
-Single character indicating the licence under which the module is distributed.
+Single character indicating the license under which the module is distributed.
 Valid options are:
 
 =over
@@ -327,7 +333,7 @@ Number of modules indexed in the file.
 
 =head2 filename
 
-Name of this file - defaults to C<'03modlist.data.gz>;
+Name of this file - defaults to C<03modlist.data.gz>;
 
 =head2 description
 
@@ -335,7 +341,7 @@ Short description of the file.
 
 =head2 parse
 
-Parses the file and reurns its representation as a data structure.
+Parses the file and returns its representation as a data structure.
 
 =head2 default_location
 

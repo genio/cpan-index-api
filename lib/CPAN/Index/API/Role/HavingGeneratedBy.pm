@@ -1,6 +1,6 @@
 package CPAN::Index::API::Role::HavingGeneratedBy;
 
-# ABSTRACT: Provides 'generated_by' and 'last_generated' attributes
+our $VERSION = '0.008';
 
 use strict;
 use warnings;
@@ -33,6 +33,12 @@ sub _build_last_generated {
 1;
 
 =pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+CPAN::Index::Role::HavingGeneratedBy - Provides 'generated_by' and 'last_generated' attributes
 
 =head1 PROVIDES
 

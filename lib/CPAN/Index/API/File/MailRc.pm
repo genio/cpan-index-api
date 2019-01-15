@@ -1,6 +1,6 @@
 package CPAN::Index::API::File::MailRc;
 
-# ABSTRACT: Interface to 01mailrc.txt
+our $VERSION = '0.008';
 
 use strict;
 use warnings;
@@ -65,6 +65,12 @@ __PACKAGE__->meta->make_immutable;
 
 =pod
 
+=encoding UTF-8
+
+=head1 NAME
+
+CPAN::Index::File::MailRc - Interface to C<01mailrc.txt>.
+
 =head1 SYNOPSIS
 
   my $mailrc = CPAN::Index::File::MailRc->parse_from_repo_uri(
@@ -77,20 +83,20 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 DESCRIPTION
 
-This is a class to read and write 01mailrc.txt
+This is a class to read and write C<01mailrc.txt>.
 
 =head1 METHODS
 
 =head2 authors
 
-List of hashres containing author data. The structure of the hashrefs is
+List of hashrefs containing author data. The structure of the hashrefs is
 as follows:
 
 =over
 
 =item authorid
 
-CPAN id of the author. This should be a string containing only capital latin
+CPAN id of the author. This should be a string containing only capital Latin
 letters and is at least 2 characters long.
 
 =item name
@@ -109,7 +115,7 @@ List of authors sorted by pause id.
 
 =head2 parse
 
-Parses the file and reurns its representation as a data structure.
+Parses the file and returns its representation as a data structure.
 
 =head2 default_location
 

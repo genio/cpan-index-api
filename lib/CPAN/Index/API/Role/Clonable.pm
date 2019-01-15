@@ -1,6 +1,6 @@
 package CPAN::Index::API::Role::Clonable;
 
-# ABSTRACT: Clones index file objects
+our $VERSION = '0.008';
 
 use strict;
 use warnings;
@@ -15,11 +15,17 @@ sub clone
 
 =pod
 
+=encoding UTF-8
+
+=head1 NAME
+
+CPAN::Index::Role::Clonable - Clones index file objects
+
 =head1 PROVIDES
 
 =head2 clone
 
-Clones the objecct. Parameters can be supplied as key/value paris to override
+Clones the object. Parameters can be supplied as key/value pairs to override
 the values of existing attributes.
 
 =cut

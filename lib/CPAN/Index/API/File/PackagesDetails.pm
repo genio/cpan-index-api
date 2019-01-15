@@ -1,6 +1,6 @@
 package CPAN::Index::API::File::PackagesDetails;
 
-# ABSTRACT: Interface to 02packages.details.txt
+our $VERSION = '0.008';
 
 use strict;
 use warnings;
@@ -158,6 +158,12 @@ __PACKAGE__->meta->make_immutable;
 
 =pod
 
+=encoding UTF-8
+
+=head1 NAME
+
+CPAN::Index::File::PackagesDetails - Interface to C<02packages.details.txt>.
+
 =head1 SYNOPSIS
 
   my $pckdetails = CPAN::Index::File::PackagesDetails->parse_from_repo_uri(
@@ -170,9 +176,13 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 DESCRIPTION
 
-This is a class to read and write 03modlist.data
+This is a class to read and write C<03modlist.data>.
 
 =head1 METHODS
+
+=head2 package
+
+First package in the list.
 
 =head2 packages
 
@@ -189,7 +199,7 @@ Package name, e.g. C<Foo::Bar>.
 
 Package version, e.g. C<0.001>.
 
-=item distribuiton
+=item distribution
 
 Distribution the package belongs to, e.g. C<Foo-Bar-0.001>.
 
@@ -217,11 +227,15 @@ Absolute URI pointing to the file location.
 
 =head2 parse
 
-Parses the file and reurns its representation as a data structure.
+Parses the file and returns its representation as a data structure.
 
 =head2 default_location
 
 Default file location - C<modules/02packages.details.txt.gz>.
+
+=head2 sorted_packages
+
+The list of packages sorted by name.
 
 =head1 METHODS FROM ROLES
 

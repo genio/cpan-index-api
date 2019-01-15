@@ -1,6 +1,6 @@
 package CPAN::Index::API::File::Whois;
 
-# ABSTRACT: Interface to 00whois.xml
+our $VERSION = '0.008';
 
 use strict;
 use warnings;
@@ -121,6 +121,12 @@ __PACKAGE__->meta->make_immutable;
 
 =pod
 
+=encoding UTF-8
+
+=head1 NAME
+
+CPAN::Index::File::Whois - Interface to C<00whois.xml>.
+
 =head1 SYNOPSIS
 
   my $mailrc = CPAN::Index::File::Whois->parse_from_repo_uri(
@@ -133,13 +139,13 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 DESCRIPTION
 
-This is a class to read and write 01mailrc.txt
+This is a class to read and write C<01mailrc.txt>.
 
 =head1 METHODS
 
 =head2 authors
 
-List of hashres containing author data. The structure of the hashrefs is
+List of hashrefs containing author data. The structure of the hashrefs is
 as follows:
 
 =over
@@ -154,7 +160,7 @@ Author's full name. Can be an empty string.
 
 =item ascii_name
 
-Author's full name, but conatining only ASCII characters.
+Author's full name, but containing only ASCII characters.
 
 =item email
 
@@ -164,7 +170,7 @@ Author's email.
 
 Boolean - true if the author has a cpan directory.
 
-=item homepate
+=item homepage
 
 Author's homepage.
 
@@ -188,7 +194,7 @@ Method that fetches the entry for a given cpanid.
 
 =head2 parse
 
-Parses the file and reurns its representation as a data structure.
+Parses the file and returns its representation as a data structure.
 
 =head2 default_location
 
