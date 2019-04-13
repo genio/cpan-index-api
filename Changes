@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Made one of the tests less dependent upon a hard-coded version
 
 0.008     2019-04-13
     - Updated the build's dist.ini

@@ -6,12 +6,16 @@ use File::Temp qw(tempfile);
 use Path::Tiny qw(path);
 use CPAN::Index::API::File::ModList;
 
+my $cur_version = CPAN::Index::API::File::ModList->VERSION() || '';
+
 # defaults
 my $with_modules = <<'EndOfModules';
 File:        03modlist.data.gz
 Description: Package names found in directory $CPAN/authors/id/
 Modcount:    3
-Written-By:  CPAN::Index::API::File::ModList 0.008
+EndOfModules
+$with_modules .= "Written-By:  CPAN::Index::API::File::ModList $cur_version\n";
+$with_modules .= <<'EndOfModules';
 Date:        Fri Mar 23 18:23:15 2012 GMT
 
 package CPAN::Modulelist;
@@ -81,7 +85,9 @@ my $without_modules = <<'EndOfModules';
 File:        03modlist.data.gz
 Description: Package names found in directory $CPAN/authors/id/
 Modcount:    0
-Written-By:  CPAN::Index::API::File::ModList 0.008
+EndOfModules
+$without_modules .= "Written-By:  CPAN::Index::API::File::ModList $cur_version\n";
+$without_modules .= <<'EndOfModules';
 Date:        Fri Mar 23 18:23:15 2012 GMT
 
 package CPAN::Modulelist;

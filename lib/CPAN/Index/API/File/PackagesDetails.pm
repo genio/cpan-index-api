@@ -1,6 +1,6 @@
 package CPAN::Index::API::File::PackagesDetails;
 
-our $VERSION = '0.008';
+our $VERSION = '0.009';
 
 use strict;
 use warnings;

@@ -1,6 +1,6 @@
 package CPAN::Index::API::Role::Writable;
 
-our $VERSION = '0.008';
+our $VERSION = '0.009';
 
 use strict;
 use warnings;
